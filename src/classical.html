@@ -21,6 +21,9 @@
 
 				<!-- Header -->
 					<header id="header">
+						<img src="images/uct_logo.png" 
+							height="140px" 
+							style="display: block;margin-left: auto;margin-right: auto; background-color: transparent;" />
 						<a href="index.html" class="logo">Exploring Entailment and Explanations</a>
 					</header>
 
@@ -33,15 +36,7 @@
 							<li><a href="tool.html">Software Tool</a></li>
 							<li><a href="results.html">Results</a></li>
 							<li><a href="resources.html">Resources</a></li>
-						</ul>
-						<!--
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-						-->
+						</ul>						
 					</nav>
 
 				<!-- Main -->
@@ -50,37 +45,55 @@
 						<section class="post">
 							<h2>Classical Reasoning</h2>
 							<p>
-								Knowledge Representation and Reasoning expresses reasoning in terms of formal languages
-								called <i>logics</i>. While there are many logics, we focus on <i>propositional logic</i> and use <i>classical propositional logic</i> as the basis for extension to KLM-style defeasible reasoning.
-								In classical propositional logic, we can encode objects such as penguins and birds as <i>propositional atoms</i> and use binary connectives to build more complex statements called <i>formulas</i>.
-								A notion of <i>entailment</i> then enables us to infer new knowledge from existing knowledge:
-								<!-- we can encode knowledge&mdash;e.g. penguins are birds, and birds fly&mdash;and infer new knowledge using <i>entailment</i>: -->
-								<img src="eqns/entails.png" class="equation" style="max-height: 65px;">
-								A set of statements&mdash;such as the LHS of the statement above&mdash;is referred to as a <i>knowledge base</i> since it represents knowledge we have modeled. Modeling information in a knowledge base and using classical entailment to infer information, in the manner demostrated above, provides us with a simple reasoning system. 
-								<!-- and similarly, explanation in the classical case serves as the basis for our exploration of explanation for defeasible reasoning. -->
+								<i>Knowledge representation and reasoning</i> involves the expression of reasoning using formal languages known 
+								as <i>logics</i>. Although there are numerous types of logics, our primary focus lies in <i>propositional logic</i>. 
+								<i>Classical propositional</i> logic serves as the foundational framework for extending to KLM-style 
+								defeasible reasoning.
 							</p>
-							<!--<p>
-								Classical reasoning is in many ways the foundation for more advanced forms of reasoning such as KLM-style defeasible propositional logic. We therefore begin by introducing explanation in the classical case.
-							</p>-->
+								<p>
+								In classical propositional logic, we represent entities, like <i>animals</i> and <i>pets</i>, 
+								as propositional atoms, and we utilize logical connectives to construct more intricate statements, 
+								which we refer to as formulas. Through the concept of entailment, we can deduce new knowledge from the 
+								existing pool of knowledge.
+								<img src="kbs/kb2.png" class="equation" style="max-height: 50px;">
+										
+								A group of statements is labeled as a <i>knowledge base, K,</i> as it encapsulates the 
+								knowledge we have formalized. Building an information repository in the form of a knowledge base 
+								and employing classical entailment for information deduction, as illustrated earlier, 
+								furnishes us with a straightforward reasoning system.
+							
+							</p>
+							<p>
+								Classical reasoning is in many ways the foundation for more advanced forms of 
+								reasoning such as KLM-style defeasible propositional logic. 								
+							</p>
 							<h2>Explanation</h2>
 							<p>
-								Sometimes we want to know why certain entailments hold.
-								For classical logic, <i>explanation</i> tells us which statements in our knowledge base are responsible for a given entailment.
-								In our work, we focus on a form of explanation known as <i>justification</i>. Justifications are minimal subsets of statements that allow us to infer a conclusion.
-								For example, suppose we know the unrelated information that ‘birds have eyes’:
-								<img src="eqns/explanation-2.png" class="equation" style="max-height: 35px;">
-								The entailment that ‘penguins fly’ for the knowledge base above then has the justification
-								<!--Explanation shows that only some of these statements are significant to the entailment that penguins fly.
-								Specifically, we find that the statements-->
-								<img src="eqns/explanation-orig.png" class="equation" style="max-height: 38px;">
-								since this amounts to 'just enough' information to allow for the inference that ‘penguins fly’. This illustrates how justifications correspond with how people explain inferences when reasoning: we certainly would not state ‘birds have eyes’ when substantiating why ‘penguins fly’.
+								Occasionally, we seek to understand the underlying reasons for the validity of certain entailments. 
+								In classical logic, <i>explanation</i> provide insight into which statements within our knowledge base are 
+								accountable for a specific entailment. Our research primarily concentrates on a type of explanation termed 
+								<i>justification</i>, which consists of the essential subsets of statements enabling us to draw a particular 
+								conclusion.								
+							</p>
+								<p>
+								For example, suppose we know the unrelated information that <i>'animals can hunt'</i>:
+								<img src="kbs/kb3.png" class="equation" style="max-height: 45px;">
+								The entailment that <i>'pets can hunt'</i> for the knowledge base above then has the justification								
+								<img src="kbs/kb4.png" class="equation" style="max-height: 45px;">
+
+								because this represents the concept of providing "just enough" information to support the inference that 
+								<i>'pets can hunt'</i>. It demonstrates how justifications align with how people typically explain their 
+								reasoning for inferences. In such a context, we wouldn't normally assert <i>'animals are wild'</i> when 
+								providing a rationale for why <i>'pets can hunt'</i>.								
 							</p>
 							<p>
-								Explanation has been shown to be an important aspect of reasoning systems.
-								The concept is particularly useful for knowledge base debugging but has also been shown to
-								be important for user comprehension and confidence in reasoning systems. Thus they are an key part of using reasoning systems practically, making them an important concept to extend to defeasible reasoning.
-							</p>							
-							
+								<i>Explanations</i> have proven to be a critical component of reasoning systems. 
+								This concept is especially valuable for debugging knowledge bases, 
+								and it has also been demonstrated to enhance user understanding and 
+								confidence in reasoning systems. Consequently, they constitute an 
+								essential element in the practical application of reasoning systems, 
+								underscoring their significance in extending to defeasible reasoning.
+							</p>														
 							<div style="display: flex; flex-direction: row-reverse;">
 								<a href="defeasible.html" class="button icon solid fa-arrow-right next-button">DEFEASIBLE REASONING</a>
 							</div>
@@ -113,8 +126,7 @@
 				<div id="copyright">
 					<ul>
 						<li>&copy; University of Cape Town</li>
-						<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-						<li><div>Icons: <a href="https://www.freepik.com" title="Freepik">Freepik</a></div></li>
+						<li>Web Design Template: <a href="https://html5up.net">HTML5 UP</a></li>						
 					</ul>
 				</div>
 
